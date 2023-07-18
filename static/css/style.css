@@ -1,0 +1,23 @@
+.cabecalho {
+    background-color: rgb(145, 152, 175);
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+}
+
+.the_Menu {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
