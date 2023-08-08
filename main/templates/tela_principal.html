@@ -1,5 +1,3 @@
-
-
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -10,6 +8,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="{% static 'css/style.css'%}">
+<script src="static\scripts.js"></script>
 <style>
 body, html {
   height: 100%;
@@ -43,7 +42,7 @@ body, html {
       <a href="#about" class="w3-button w3-block cabecalho">Sobre</a>
     </div>
     <div class="w3-col s3">
-      <button class="w3-button w3-block cabecalho" onclick=reserva(request)>Reserva</button>
+      <button class="w3-button w3-block cabecalho" id="botao_reserva" onclick="mudar_para_pagina_reserva()">Reserva</button>
     </div>
   </div>
 </div>
@@ -93,28 +92,9 @@ body, html {
       <p><i>"Deixe-se envolver por uma experiência gastronômica única, onde cada mordida é uma obra de arte.</i></p>
       <p>Chefe: Liam Brown</p>
     </div>
-    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
     <p><strong>Horas Abertas:</strong> Terça a sabados apenas no horario do jantar.</p>
     <p><strong>Endereço:</strong> 15 Adr street, 5015, NY</p>
   </div>
 </div>
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-</script>
-
 </body>
 </html>
