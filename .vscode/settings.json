@@ -1,0 +1,11 @@
+{
+ "folders": [
+  {
+   "path": ""
+  }
+ ],
+ "settings": {
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.defaultInterpreterPath": "/Users/jeanlucevinson/Documents/Projetos/Restaurante/restaurante-env/bin/python3"
+ }
+}
