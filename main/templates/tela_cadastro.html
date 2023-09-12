@@ -8,8 +8,8 @@
 
         <h1>Formulário de Cadastro</h1>
 
-        <form class="form" action="#" method="post">
-            
+        <form action="{% url 'cadastrar' %}" method="POST">
+            {% csrf_token %}
             <div class="form_grupo">
                 <label for="nome" class="form_label">Nome</label>
                 <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>

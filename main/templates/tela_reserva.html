@@ -1,5 +1,4 @@
 {% load static %}
-{%%}
 <!DOCTYPE html>
 <link rel="stylesheet" href="{% static 'css/style_reserva.css'%}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -18,29 +17,26 @@
 		<figcaption>Photo by Maksim Larin</figcaption>
 
 	</figure>
-	<p class="special">Reserva</p>
-	<label for="size-select">DATA:</label>
-	<div class="dates">
-		<div class="date">
-		   <input class="form-control start_date mb-4" type="button" onclick="caldendario()" placeholder="Escolha a Data">
-		   <span class="fa fa-calendar start_date_calendar" aria-hidden="true "></span>
-		</div>
-	 </div>
-	<label for="color-select">Color:</label>
-	<select name="color" id="color-select">
-		<option value=""></option>
-		<option value="blue">blue</option>
-		<option value="red">red</option>
-		<option value="black">black</option>
-	</select>
-	<label for="quantity-select">Quantity:</label>
-	<select name="quantity" id="quantity-select">
-		<option value=""></option>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-	</select>
-	<button type="button" href="{% url 'cadastrar' %}">Reservar</button>
+	<form method="post" action="{% url 'salvar_reserva' %}">
+		{% csrf_token %}
+		<p class="special">Reserva</p>
+		<label for="size-select">DATA:</label>
+		<label for="color-select">Color:</label>
+		<select name="color" id="color-select">
+			<option value=""></option>
+			<option value="blue">blue</option>
+			<option value="red">red</option>
+			<option value="black">black</option>
+		</select>
+		<label for="quantity-select">Quantity:</label>
+		<select name="quantity" id="quantity-select">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<button type="submit" name="Submit" class="submit_btn">Reservar</button>
+	</form>
 </div>
